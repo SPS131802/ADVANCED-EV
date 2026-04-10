@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart EV Charging Pro</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+  <div class="home-container">
+    <div class="logo-circle">⚡</div>
+    <h1 class="brand">SmartCharge</h1>
+    <p class="tagline">Your Intelligent EV Charging Companion</p>
+
+    <div class="btn-group">
+      <button class="main-btn" onclick="goToPage(2)">Find Charging Stations</button>
+      <button class="main-btn secondary-btn" onclick="goToPage(3)">Power Management</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+  <h2>Charging Stations</h2>
+  <div id="stationsList"></div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+  <h2 class="dashboard-title">Management Dashboard</h2>
+
+  <div class="dashboard-cards">
+    <div class="card" id="stats"></div>
+    <div class="card" id="energy"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="stationsPanel"></div>
+
+  <div class="controls">
+    <button class="assist-btn" onclick="voiceAssistant()">Assistant</button>
+    <button class="call-btn" id="callBtn">Call</button>
+  </div>
+
+</div>
+
+<script src="stations.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
